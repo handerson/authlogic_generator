@@ -1,0 +1,7 @@
+This will generator a basic Authlogic setup (login/logout, password reset).
+
+If you place this generator in ~/.rails/generators it will be available to all projects. 
+
+Example:
+script/generate authlogic User
+
