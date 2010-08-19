@@ -1,0 +1,5 @@
+Description:
+  Creates basic working Authlogic scaffold
+ 
+Example:
+    ./script/generate authlogic User

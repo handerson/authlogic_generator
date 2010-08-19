@@ -1,0 +1,34 @@
+<h1>Listing <%=file_name.pluralize%></h1>
+
+<table class="style">
+  <tr>
+    <th>Email</th>
+    <th>Login count</th>
+    <th>Last request at</th>
+    <th>Last login at</th>
+    <th>Current login at</th>
+    <th>Last login ip</th>
+    <th>Current login ip</th>
+	<th>Level</th>
+  </tr>
+
+<%% for user in @<%=file_name%> %>
+  <tr>
+    <td><%%=h user.email %></td>
+    <td><%%=h user.login_count %></td>
+    <td><%%=h user.last_request_at %></td>
+    <td><%%=h user.last_login_at %></td>
+    <td><%%=h user.current_login_at %></td>
+    <td><%%=h user.last_login_ip %></td>
+    <td><%%=h user.current_login_ip %></td>
+	<td><%%=h user.level %></td>
+    <td><%%= link_to 'Show', <%=file_name%> %></td>
+    <td><%%= link_to 'Edit', edit_<%=file_name%>_path(user) %></td>
+    <td><%%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<%% end %>
+</table>
+
+<br />
+
+<%%= link_to 'New <%=file_name%>', new_<%=file_name%>_path %>
